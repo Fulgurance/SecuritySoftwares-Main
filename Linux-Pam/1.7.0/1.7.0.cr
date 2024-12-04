@@ -73,6 +73,8 @@ class Target < ISM::Software
 
             end
         end
+
+        deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/no")
     end
 
     def install
