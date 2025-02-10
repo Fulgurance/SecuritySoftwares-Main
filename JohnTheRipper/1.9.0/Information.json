@@ -1,0 +1,23 @@
+{
+  "port": "SecuritySoftwares-Main",
+  "name": "JohnTheRipper",
+  "version": "1.9.0",
+  "architectures": ["x86_64"],
+  "description": "Advanced offline password cracker, which supports hundreds of hash and cipher types, and runs on many operating systems, CPUs, GPUs, and even some FPGAs",
+  "website": "https://github.com/openwall/john",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
