@@ -15,7 +15,7 @@ class Target < ISM::Software
                                     --buildtype=release                                             \
                                     -Dlddtree_implementation=python                                 \
                                     -Duse_libcap=#{option("Libcap") ? "enabled" : "disabled"}       \
-                                    -Duse_seccomp=#{option("Libseccomp") ? "enabled" : "disabled"}  \
+                                    -Duse_seccomp=#{option("Libseccomp") ? "true" : "false"}        \
                                     -Dtests=false                                                   \
                                     -Duse_fuzzing=false",
                         path:       mainWorkDirectoryPath)
