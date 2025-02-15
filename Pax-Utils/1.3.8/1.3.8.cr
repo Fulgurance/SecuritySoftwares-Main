@@ -13,7 +13,7 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}                            \
                                     --prefix=/usr                                                   \
                                     --buildtype=release                                             \
-                                    -Dlddtree_implementation=python                                 \
+                                    -Dlddtree_implementation=sh                                     \
                                     -Duse_libcap=#{option("Libcap") ? "enabled" : "disabled"}       \
                                     -Duse_seccomp=#{option("Libseccomp") ? "true" : "false"}        \
                                     -Dtests=false                                                   \
