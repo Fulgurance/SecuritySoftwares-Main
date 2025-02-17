@@ -33,8 +33,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
-                    path:       buildDirectoryPath)
+        #Need to copy manually files
     end
 
 end
