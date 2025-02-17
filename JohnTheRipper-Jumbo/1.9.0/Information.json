@@ -1,6 +1,6 @@
 {
   "port": "SecuritySoftwares-Main",
-  "name": "JohnTheRipper",
+  "name": "JohnTheRipper-Jumbo",
   "version": "1.9.0",
   "architectures": ["x86_64"],
   "description": "Advanced offline password cracker, which supports hundreds of hash and cipher types, and runs on many operating systems, CPUs, GPUs, and even some FPGAs",
