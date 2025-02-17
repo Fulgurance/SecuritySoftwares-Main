@@ -1,0 +1,41 @@
+{
+  "port": "SecuritySoftwares-Main",
+  "name": "Hashcat",
+  "version": "6.2.6",
+  "architectures": ["x86_64"],
+  "description": "World's fastest and most advanced password recovery utility",
+  "website": "https://github.com/hashcat/hashcat",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Zlib",
+      "version": ">=1.2.13",
+      "options": ["Minizip"]
+    },
+    {
+      "port": "SecurityLibraries-Main",
+      "name": "XxHash",
+      "version": ">=0.8.3",
+      "options": []
+    },
+    {
+      "port": "Archivers-Main",
+      "name": "Unrar",
+      "version": ">=6.2.10",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Opencl-Icd-Loader",
+      "version": ">=0.0.0-20241024",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
