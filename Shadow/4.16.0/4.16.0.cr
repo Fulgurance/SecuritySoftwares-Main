@@ -42,7 +42,7 @@ class Target < ISM::Software
         generateEmptyFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/bin/passwd")
 
         if !File.exists?("#{Ism.settings.rootPath}/usr/bin/passwd")
-            generateEmptyFile("/usr/bin/passwd")
+            generateEmptyPasswdFile
         end
     end
 
