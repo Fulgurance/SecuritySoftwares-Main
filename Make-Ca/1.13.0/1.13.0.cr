@@ -12,8 +12,6 @@ class Target < ISM::Software
     def install
         super
 
-        runChmodCommand("0755 /etc/ssl/local")
-
         softwareIsInstalled("@SecuritySoftwares-Main:Make-Ca") ? runMakeCaCommand("-r") : runMakeCaCommand("-g")
     end
 
