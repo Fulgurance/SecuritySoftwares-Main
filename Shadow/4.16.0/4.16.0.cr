@@ -264,8 +264,6 @@ class Target < ISM::Software
         runPwconvCommand
         runGrpconvCommand
 
-        runChmodCommand("0644 /etc/login.defs")
-
         runUserAddCommand("-D --gid 999")
 
         if option("Linux-Pam")

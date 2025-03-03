@@ -73,10 +73,4 @@ class Target < ISM::Software
         end
     end
 
-    def install
-        super
-
-        runChmodCommand("04755 /usr/sbin/unix_chkpwd")
-    end
-
 end
