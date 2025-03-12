@@ -23,7 +23,10 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}  \
+                                install_uid=#{Ism.systemId}                                     \
+                                install_gid=#{Ism.systemId}                                     \
+                                install",
                     path:       buildDirectoryPath)
 
         if option("Linux-Pam")
