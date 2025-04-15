@@ -258,13 +258,11 @@ class Target < ISM::Software
         end
     end
 
-    def install
+    def deploy
         super
 
         runPwconvCommand
         runGrpconvCommand
-
-        runUserAddCommand("-D --gid 999")
 
         if option("Linux-Pam")
             if File.exists?("#{Ism.settings.rootPath}etc/login.access")
