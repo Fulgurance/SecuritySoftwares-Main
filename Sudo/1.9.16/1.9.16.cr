@@ -65,6 +65,15 @@ class Target < ISM::Software
         %wheel ALL=(ALL) ALL
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/00-sudo",sudoConfigData)
+
+        #EXPERIMENTAL
+        #Special rule for ism user
+        # Basically, the idea is to allow the system user ism to run any privileged commands,
+        # but it will be controled under the program. And the ism user should be always locked (no password set)
+        ismConfigData = <<-CODE
+        ism ALL=(ALL) NOPASSWD: ALL
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/ism",ismConfigData)
     end
 
 end
