@@ -39,11 +39,6 @@ class Target < ISM::Software
                         newText:    "ENCRYPT_METHOD SHA512")
 
         makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/bin/")
-        generateEmptyFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/bin/passwd")
-
-        if !File.exists?("#{Ism.settings.rootPath}/usr/bin/passwd")
-            generateEmptyPasswdFile
-        end
     end
 
     def configure
