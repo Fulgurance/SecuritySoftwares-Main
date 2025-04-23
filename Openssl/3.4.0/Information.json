@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Zlib",
-      "version": ">=1.2.13",
+      "port": "ProgrammingLanguages-Main",
+      "name": "Perl",
+      "version": ">=5.40.0",
       "options": []
     }
   ],
