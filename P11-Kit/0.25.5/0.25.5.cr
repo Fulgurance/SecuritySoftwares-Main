@@ -12,7 +12,7 @@ class Target < ISM::Software
         # Update trust stores
         /usr/sbin/make-ca -r
         CODE
-        fileAppendData("#{mainWorkDirectoryPath}trust/trust-extract-compat",data)
+        fileAppendData("#{mainWorkDirectoryPath}/trust/trust-extract-compat",data)
     end
 
     def configure
