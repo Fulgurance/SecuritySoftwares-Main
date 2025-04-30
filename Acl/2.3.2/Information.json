@@ -8,15 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": ["Pass2"]
-    },
-    {
       "port": "Utilities-Main",
       "name": "Attr",
-      "version": ">=2.5.1",
+      "version": ">=2.5.2",
       "options": []
     }
   ],
