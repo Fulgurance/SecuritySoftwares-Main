@@ -24,8 +24,8 @@ class Target < ISM::Software
         super
 
         makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}  \
-                                install_uid=#{Ism.systemId}                                     \
-                                install_gid=#{Ism.systemId}                                     \
+                                install_uid=#{systemId}                                         \
+                                install_gid=#{systemId}                                         \
                                 install",
                     path:       buildDirectoryPath)
 
