@@ -12,6 +12,12 @@
       "name": "Ninja",
       "version": ">=1.12.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Meson",
+      "version": ">=1.6.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
