@@ -46,4 +46,12 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        if autoDeployServices
+            if option("Openrc")
+                runRcUpdateCommand("add dmcrypt boot")
+            end
+        end
+    end
+
 end
