@@ -75,4 +75,11 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/sbin/unix_chkpwd")
+        runChmodCommand("04755 /usr/sbin/unix_chkpwd")
+    end
+
 end
