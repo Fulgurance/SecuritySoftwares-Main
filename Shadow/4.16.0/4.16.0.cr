@@ -278,6 +278,9 @@ class Target < ISM::Software
                             "#{Ism.settings.rootPath}etc/limits")
             end
         end
+
+        runChownCommand("root:root /etc/login.defs")
+        runChmodCommand("0644 /etc/login.defs")
     end
 
 end

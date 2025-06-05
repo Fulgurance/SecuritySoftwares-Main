@@ -76,4 +76,11 @@ class Target < ISM::Software
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/ism",ismConfigData)
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/bin/sudo")
+        runChmodCommand("u+s /usr/bin/sudo")
+    end
+
 end
