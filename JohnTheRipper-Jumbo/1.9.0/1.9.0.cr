@@ -16,12 +16,12 @@ class Target < ISM::Software
                                     --with-systemwide       \
                                     --disable-native-tests  \
                                     --enable-openmp         \
-                                    --enable-mpi            \
+                                    --disable-mpi            \
                                     --enable-opencl         \
                                     --enable-pkg-config     \
                                     --enable-pcap",
                         path:       buildDirectoryPath,
-                        environment:    {   "CFLAGS" => "${CFLAGS} -DCPU_FALLBACK"})
+                        relatedToMainBuild: false)
     end
 
     def build
@@ -33,7 +33,12 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        #Need to copy manually files
+        exit 1
+
+        moveFile("#{buildDirectoryPath}/run/john.conf","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{buildDirectoryPath}/run/*.conf","#{builtSoftwareDirectoryPath}/usr/share/john/")
+
+        moveFile("#{buildDirectoryPath}/run/john.bash_completion","#{builtSoftwareDirectoryPath}/usr/share/bash-completion/completions/john")
     end
 
 end
