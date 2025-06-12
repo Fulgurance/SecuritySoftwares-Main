@@ -6,8 +6,8 @@ class Target < ISM::Software
         makeSource( arguments: "PREFIX=/usr         \
                                 SHARED=1            \
                                 PRODUCTION=1        \
-                                ENABLE_BRAIN=0      \
-                                USE_SYSTEM_LZMA=1   \
+                                ENABLE_BRAIN=1      \
+                                USE_SYSTEM_LZMA=0   \
                                 USE_SYSTEM_OPENCL=1 \
                                 USE_SYSTEM_UNRAR=1  \
                                 USE_SYSTEM_ZLIB=1   \
@@ -22,8 +22,8 @@ class Target < ISM::Software
         makeSource( arguments:  "PREFIX=/usr            \
                                 SHARED=1                \
                                 PRODUCTION=1            \
-                                ENABLE_BRAIN=0          \
-                                USE_SYSTEM_LZMA=1       \
+                                ENABLE_BRAIN=1          \
+                                USE_SYSTEM_LZMA=0       \
                                 USE_SYSTEM_OPENCL=1     \
                                 USE_SYSTEM_UNRAR=1      \
                                 USE_SYSTEM_ZLIB=1       \
