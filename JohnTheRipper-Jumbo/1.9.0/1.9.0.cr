@@ -17,7 +17,7 @@ class Target < ISM::Software
                                     --disable-native-tests  \
                                     --enable-openmp         \
                                     --disable-mpi            \
-                                    --enable-opencl         \
+                                    --disable-opencl         \
                                     --enable-pkg-config     \
                                     --enable-pcap",
                         path:       buildDirectoryPath,
@@ -33,12 +33,37 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        exit 1
+        makeDirectory("#{builtSoftwareDirectoryPath}/etc/john/")
+        makeDirectory("#{builtSoftwareDirectoryPath}/usr/share/john/")
+        makeDirectory("#{builtSoftwareDirectoryPath}/usr/bin/")
 
-        moveFile("#{buildDirectoryPath}/run/john.conf","#{builtSoftwareDirectoryPath}/etc/john/")
-        moveFile("#{buildDirectoryPath}/run/*.conf","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{buildDirectoryPath}/run/*.conf","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{buildDirectoryPath}/run/*.chr","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{buildDirectoryPath}/run/password.lst","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{buildDirectoryPath}/run/rules","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{buildDirectoryPath}/run/ztex","#{builtSoftwareDirectoryPath}/etc/john/")
 
-        moveFile("#{buildDirectoryPath}/run/john.bash_completion","#{builtSoftwareDirectoryPath}/usr/share/bash-completion/completions/john")
+        moveFile("#{buildDirectoryPath}/run/lib","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{buildDirectoryPath}/run/*.pl","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{buildDirectoryPath}/run/*.py","#{builtSoftwareDirectoryPath}/usr/share/john/")
+
+        moveFile("#{buildDirectoryPath}/run/john","#{builtSoftwareDirectoryPath}/usr/bin/john")
+        moveFile("#{buildDirectoryPath}/run/mailer","#{builtSoftwareDirectoryPath}/usr/bin/john-mailer")
+
+        directoryContent("#{builtSoftwareDirectoryPath}/usr/share/john/*").each do |file|
+            fileName = file.lchop(file[0..file.rindex("/")])
+
+            if !File.symlink?(file) && !File.directory?(file)
+                if (file[-3..-1] == ".py") || (file[-3..-1] == ".pl")
+
+                    runChmodCommand("+x #{file}")
+                    makeLink(   target: "../share/#{fileName}",
+                        path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/bin/#{fileName}",
+                        type:   :symbolicLink)
+
+                end
+            end
+        end
     end
 
 end
