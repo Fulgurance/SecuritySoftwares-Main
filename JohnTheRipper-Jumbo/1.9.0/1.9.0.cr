@@ -37,18 +37,18 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}/usr/share/john/")
         makeDirectory("#{builtSoftwareDirectoryPath}/usr/bin/")
 
-        moveFile("#{buildDirectoryPath}/run/*.conf","#{builtSoftwareDirectoryPath}/etc/john/")
-        moveFile("#{buildDirectoryPath}/run/*.chr","#{builtSoftwareDirectoryPath}/etc/john/")
-        moveFile("#{buildDirectoryPath}/run/password.lst","#{builtSoftwareDirectoryPath}/etc/john/")
-        moveFile("#{buildDirectoryPath}/run/rules","#{builtSoftwareDirectoryPath}/etc/john/")
-        moveFile("#{buildDirectoryPath}/run/ztex","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/*.conf","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/*.chr","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/password.lst","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/rules","#{builtSoftwareDirectoryPath}/etc/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/ztex","#{builtSoftwareDirectoryPath}/etc/john/")
 
-        moveFile("#{buildDirectoryPath}/run/lib","#{builtSoftwareDirectoryPath}/usr/share/john/")
-        moveFile("#{buildDirectoryPath}/run/*.pl","#{builtSoftwareDirectoryPath}/usr/share/john/")
-        moveFile("#{buildDirectoryPath}/run/*.py","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/lib","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/*.pl","#{builtSoftwareDirectoryPath}/usr/share/john/")
+        moveFile("#{mainWorkDirectoryPath}/run/*.py","#{builtSoftwareDirectoryPath}/usr/share/john/")
 
-        moveFile("#{buildDirectoryPath}/run/john","#{builtSoftwareDirectoryPath}/usr/bin/john")
-        moveFile("#{buildDirectoryPath}/run/mailer","#{builtSoftwareDirectoryPath}/usr/bin/john-mailer")
+        moveFile("#{mainWorkDirectoryPath}/run/john","#{builtSoftwareDirectoryPath}/usr/bin/john")
+        moveFile("#{mainWorkDirectoryPath}/run/mailer","#{builtSoftwareDirectoryPath}/usr/bin/john-mailer")
 
         directoryContent("#{builtSoftwareDirectoryPath}/usr/share/john/*").each do |file|
             fileName = file.lchop(file[0..file.rindex("/")])
