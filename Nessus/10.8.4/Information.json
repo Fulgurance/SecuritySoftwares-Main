@@ -1,0 +1,23 @@
+{
+  "port": "SecuritySoftwares-Main",
+  "name": "Nessus",
+  "version": "10.8.4",
+  "architectures": ["x86_64"],
+  "description": "Vulnerability scanning solution",
+  "website": "https://www.tenable.com/products/nessus",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
