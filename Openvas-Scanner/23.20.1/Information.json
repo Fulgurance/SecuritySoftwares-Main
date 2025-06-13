@@ -14,9 +14,9 @@
       "options": []
     },
     {
-      "port": "BaseLibraries-Main",
-      "name": "Libcap",
-      "version": ">=2.70.0",
+      "port": "SecurityLibraries-Main",
+      "name": "Gvm-Libs",
+      "version": ">=22.22.0",
       "options": []
     }
   ],
