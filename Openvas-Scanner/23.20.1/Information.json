@@ -18,6 +18,12 @@
       "name": "Gvm-Libs",
       "version": ">=22.22.0",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libbsd",
+      "version": ">=0.12.2",
+      "options": []
     }
   ],
   "kernelDependencies": [],
