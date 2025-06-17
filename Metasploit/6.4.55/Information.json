@@ -1,0 +1,23 @@
+{
+  "port": "SecuritySoftwares-Main",
+  "name": "Metasploit",
+  "version": "6.4.55",
+  "architectures": ["x86_64"],
+  "description": "The world’s most used penetration testing framework",
+  "website": "https://www.metasploit.com/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Ruby",
+      "version": ">=3.4.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
