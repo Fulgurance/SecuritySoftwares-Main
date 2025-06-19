@@ -43,6 +43,13 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d")
 
+        jdkData = <<-CODE
+        Defaults env_keep += JAVA_HOME
+        Defaults env_keep += CLASSPATH
+        Defaults env_keep += _JAVA_OPTIONS
+        CODE
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/jdk",qtData)
+
         qtData = <<-CODE
         Defaults env_keep += QT5DIR
         Defaults env_keep += QT6DIR
