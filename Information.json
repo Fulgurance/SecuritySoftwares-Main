@@ -1,0 +1,6 @@
+{
+  "name": "SecuritySoftwares-Main",
+  "url": "https://github.com/Fulgurance/SecuritySoftwares-Main",
+  "publicKeyUrl": "http://www.slashlinux.io/keyring/Fulgurance.key",
+  "description": "Port that contain all softwares that enforce or test the security"
+}
