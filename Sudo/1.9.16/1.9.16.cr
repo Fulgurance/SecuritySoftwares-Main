@@ -48,7 +48,7 @@ class Target < ISM::Software
         Defaults env_keep += CLASSPATH
         Defaults env_keep += _JAVA_OPTIONS
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/jdk",qtData)
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/sudoers.d/jdk",jdkData)
 
         qtData = <<-CODE
         Defaults env_keep += QT5DIR
