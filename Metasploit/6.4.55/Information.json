@@ -12,6 +12,18 @@
       "name": "Ruby",
       "version": ">=3.4.4",
       "options": []
+    },
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Perl",
+      "version": ">=5.40.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "FindBin",
+      "version": ">=1.54.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
