@@ -3,13 +3,6 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-
-        if option("Js")
-            fileReplaceTextAtLineNumber(path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/src/polkitbackend/polkitbackendjsauthority.cpp",
-                                        text:       " { JS_Init",
-                                        newText:    " { JS::DisableJitBackend(); JS_Init",
-                                        lineNumber: 59)
-        end
     end
 
     def configure
@@ -20,8 +13,8 @@ class Target < ISM::Software
                                     #{@buildDirectoryNames["MainBuild"]}                                    \
                                     --prefix=/usr                                                           \
                                     --buildtype=release                                                     \
-                                    -Dos_type=\"#{Ism.settings.systemTargetName}\"                          \
-                                    #{option("Elogind") ? "-Dsession_tracking=libelogind" : ""}             \
+                                    -Dos_type=\"lfs\"                                                       \
+                                    #{option("Elogind") ? "-Dsession_tracking=elogind" : ""}             \
                                     -Dauthfw=#{option("Linux-Pam") ? "pam" : "shadow"}                      \
                                     -Dintrospection=#{option("Gobject-Introspection") ? "true" : "false"}   \
                                     #{option("Js") ? "-Djs_engine=mozjs" : ""}                              \
