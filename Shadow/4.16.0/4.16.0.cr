@@ -69,6 +69,7 @@ class Target < ISM::Software
                     path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/etc/default")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/etc/pam.d")
 
         useraddData = <<-CODE
         GROUP=1000
