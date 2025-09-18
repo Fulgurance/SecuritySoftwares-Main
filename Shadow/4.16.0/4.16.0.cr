@@ -72,7 +72,7 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/etc/pam.d")
 
         useraddData = <<-CODE
-        GROUP=1000
+        GROUP=999
         CREATE_MAIL_SPOOL=no
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/default/useradd",useraddData)
