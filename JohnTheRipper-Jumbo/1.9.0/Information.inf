@@ -1,0 +1,19 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    JohnTheRipper-Jumbo
+VERSION
+    1.9.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Advanced offline password cracker, which supports hundreds of hash and cipher types, and runs on many operating systems, CPUs, GPUs, and even some FPGAs
+WEBSITE
+    https://github.com/openwall/john
+DEPENDENCIES
+        @NetworkingLibraries-Main:Libpcap>=1.10.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

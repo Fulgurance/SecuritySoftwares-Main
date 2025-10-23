@@ -1,0 +1,19 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Keyutils
+VERSION
+    1.6.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tools used to control the key management system built into the Linux kernel
+WEBSITE
+    https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git
+DEPENDENCIES
+        @NetworkingSoftwares-Main:Mit-Krb5>=1.21.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

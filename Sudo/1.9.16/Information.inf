@@ -1,0 +1,26 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Sudo
+VERSION
+    1.9.16
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Software allows a system administrator to delegate authority to give certain users the ability to run commands as root
+WEBSITE
+    https://www.sudo.ws/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Linux-Pam
+    description: Enable linux-pam support
+    active: true
+    dependencies:
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.3
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

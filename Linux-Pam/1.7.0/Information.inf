@@ -1,0 +1,49 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Linux-Pam
+VERSION
+    1.7.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Linux PAM (Pluggable Authentication Modules for Linux) project
+WEBSITE
+    https://github.com/linux-pam/linux-pam
+DEPENDENCIES
+        @ProgrammingTools-Main:Ninja>=1.12.0
+        @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Libpwquality
+    description: Enable libpwquality support to enforce passwords
+    active: true
+    dependencies:
+        @SecurityLibraries-Main:Libpwquality>=1.4.5
+    kernelDependencies:
+
+    name: BerkeleyDb
+    description: Enable berkeleydb support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:BerkeleyDb>=5.3.28
+    kernelDependencies:
+
+    name: Libnsl
+    description: Enable libnsl support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Libnsl>=2.0.0
+    kernelDependencies:
+
+    name: Libtirpc
+    description: Enable libtirpc support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Libtirpc>=1.3.3
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+    @SecurityLibraries-Main:Libpwquality

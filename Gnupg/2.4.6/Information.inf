@@ -1,0 +1,53 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Gnupg
+VERSION
+    2.4.6
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Complete and free implementation of the OpenPGP standard as defined by RFC4880
+WEBSITE
+    https://gnupg.org/
+DEPENDENCIES
+        @SecurityLibraries-Main:Libassuan>=2.5.6
+        @SecurityLibraries-Main:Libgcrypt>=1.10.2
+        @SecurityLibraries-Main:Libksba>=1.6.4
+        @BaseLibraries-Main:Npth>=1.6.0
+        @BaseLibraries-Main:Openldap>=2.6.6
+        @SecurityLibraries-Main:Gnutls>=3.8.1
+        @SecuritySoftwares-Main:Pinentry>=1.2.1
+KERNELDEPENDENCIES
+OPTIONS
+    name: Curl
+    description: Enable curl support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Curl>=8.2.1
+    kernelDependencies:
+
+    name: Fuse
+    description: Enable fuse support
+    active: false
+    dependencies:
+        @FileSystems-Main:Fuse>=3.16.1
+    kernelDependencies:
+
+    name: Libusb
+    description: Enable libusb support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Libusb>=1.0.26
+    kernelDependencies:
+
+    name: Sqlite
+    description: Enable sqlite support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Sqlite>=3.42.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

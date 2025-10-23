@@ -1,0 +1,26 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Make-Ca
+VERSION
+    1.16.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Utility to deliver and manage a complete PKI configuration for workstations and servers using only standard Unix utilities
+WEBSITE
+    https://github.com/djlucas/make-ca
+DEPENDENCIES
+        @SecuritySoftwares-Main:P11-Kit>=0.25.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Nss
+    description: Enable nss support
+    active: false
+    dependencies:
+        @SecurityLibraries-Main:Nss>=3.92.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

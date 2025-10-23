@@ -1,0 +1,51 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Polkit
+VERSION
+    126.0.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Toolkit for defining and handling authorizations
+WEBSITE
+    https://github.com/polkit-org/polkit
+DEPENDENCIES
+        @BaseLibraries-Main:Glib>=2.76.4
+        @BaseLibraries-Main:Duktape>=2.7.0
+        @SystemUsers-Main:Polkitd>=0.1.0
+        @SystemGroups-Main:Polkitd>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Js
+    description: Enable js support
+    active: false
+    dependencies:
+        @ProgrammingLanguages-Main:Js>=102.13.0
+    kernelDependencies:
+
+    name: Gobject-Introspection
+    description: Enable gobject-introspection
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+    name: Libxslt
+    description: Enable libxslt support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Libxslt>=1.1.38
+    kernelDependencies:
+
+    name: Elogind
+    description: Enable elogind support
+    active: true
+    dependencies:
+        @Utilities-Main:Elogind>=252.9.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+    @Utilities-Main:Elogind

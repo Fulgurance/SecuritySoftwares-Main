@@ -1,0 +1,21 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Openvas-Scanner
+VERSION
+    23.20.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Full-featured scan engine that executes a continuously updated and extended feed of Vulnerability Tests
+WEBSITE
+    https://github.com/greenbone/openvas-scanner
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+        @SecurityLibraries-Main:Gvm-Libs>=22.22.0
+        @BaseLibraries-Main:Libbsd>=0.12.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

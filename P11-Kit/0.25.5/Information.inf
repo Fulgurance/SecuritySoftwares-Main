@@ -1,0 +1,47 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    P11-Kit
+VERSION
+    0.25.5
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Provides a way to load and enumerate PKCS#11 modules
+WEBSITE
+    https://github.com/p11-glue/p11-kit
+DEPENDENCIES
+        @ProgrammingTools-Main:Ninja>=1.12.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Libtasn1
+    description: Enable Libtasn1 support for trust
+    active: true
+    dependencies:
+        @BaseLibraries-Main:Libtasn1>=4.19.0
+    kernelDependencies:
+
+    name: Make-Ca
+    description: Enable make-ca support
+    active: false
+    dependencies:
+        @SecuritySoftwares-Main:Make-Ca>=1.12.0
+    kernelDependencies:
+
+    name: Libxslt
+    description: Enable libxslt support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Libxslt>=1.1.38
+    kernelDependencies:
+
+    name: Nss
+    description: Enable nss support
+    active: false
+    dependencies:
+        @SecuritySoftwares-Main:Nss>=3.92.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -1,0 +1,38 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Shadow
+VERSION
+    4.16.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Utility for converting UNIX password files to the shadow password format, plus programs for managing user and group accounts
+WEBSITE
+     https://github.com/shadow-maint/shadow
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+        @SecuritySoftwares-Main:Acl>=2.3.1
+        @Utilities-Main:Attr>=2.5.1
+        @BaseLibraries-Main:Libcap>=2.69.0
+        @BaseLibraries-Main:Libtool>=2.4.7
+        @SecurityLibraries-Main:Libxcrypt>=4.4.36
+KERNELDEPENDENCIES
+OPTIONS
+    name: Cracklib
+    description: Enable cracklib support to enforce passwords
+    active: false
+    dependencies:
+        @SecurityLibraries-Main:Cracklib>=2.9.11
+    kernelDependencies:
+
+    name: Linux-Pam
+    description: Enable linux-pam support
+    active: false
+    dependencies:
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.3
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

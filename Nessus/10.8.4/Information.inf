@@ -1,0 +1,26 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Nessus
+VERSION
+    10.8.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Vulnerability scanning solution
+WEBSITE
+    https://www.tenable.com/products/nessus
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Openrc
+    description: Enable openrc support
+    active: false
+    dependencies:
+        @InitSystems-Main:Openrc>=0.52.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

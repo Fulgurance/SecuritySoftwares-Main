@@ -1,0 +1,24 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Keepassxc
+VERSION
+    2.7.8
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Cross-platform community-driven port of the Windows application Keepass Password Safe
+WEBSITE
+    https://keepassxc.org/
+DEPENDENCIES
+        @BaseLibraries-Main:Zlib>=1.2.13(Minizip)
+        @QtLibraries-Main:Qtsvg>=5.0.0 ~ <6.0.0
+        @QtLibraries-Main:Qttools>=5.0.0 ~ <6.0.0
+        @QtLibraries-Main:Qtx11extras>=5.0.0 ~ <6.0.0
+        @SecurityLibraries-Main:Botan>=3.4.0
+        @SecuritySoftwares-Main:Argon2>=0.0.0-20190702
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

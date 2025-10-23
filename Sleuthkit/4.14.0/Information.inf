@@ -1,0 +1,19 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Sleuthkit
+VERSION
+    4.14.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library and collection of command line digital forensics tools that allow you to investigate volume and file system data.
+WEBSITE
+    https://github.com/sleuthkit/sleuthkit
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

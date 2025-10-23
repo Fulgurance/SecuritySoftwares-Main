@@ -1,0 +1,22 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Hashcat
+VERSION
+    6.2.6
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    World's fastest and most advanced password recovery utility
+WEBSITE
+    https://github.com/hashcat/hashcat
+DEPENDENCIES
+        @BaseLibraries-Main:Zlib>=1.2.13(Minizip)
+        @SecurityLibraries-Main:XxHash>=0.8.3
+        @Archivers-Main:Unrar>=6.2.10
+        @BaseLibraries-Main:Opencl-Icd-Loader>=0.0.0-20241024
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

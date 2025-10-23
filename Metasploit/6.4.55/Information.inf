@@ -1,0 +1,21 @@
+PORT
+    SecuritySoftwares-Main
+NAME
+    Metasploit
+VERSION
+    6.4.55
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The world’s most used penetration testing framework
+WEBSITE
+    https://www.metasploit.com/
+DEPENDENCIES
+        @ProgrammingLanguages-Main:Ruby>=3.4.4
+        @ProgrammingLanguages-Main:Perl>=5.40.0
+        @BaseLibraries-Main:FindBin>=1.54.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
