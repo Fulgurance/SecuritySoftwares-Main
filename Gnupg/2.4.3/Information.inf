@@ -27,11 +27,11 @@ OPTIONS
         @NetworkingLibraries-Main:Curl>=8.2.1
     kernelDependencies:
 
-    name: Fuse
-    description: Enable fuse support
+    name: Libfuse
+    description: Enable libfuse support
     active: false
     dependencies:
-        @FileSystems-Main:Fuse>=3.16.1
+        @FileSystems-Main:Libfuse>=3.16.1
     kernelDependencies:
 
     name: Libusb
