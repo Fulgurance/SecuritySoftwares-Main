@@ -9,7 +9,7 @@ ARCHITECTURES
 DESCRIPTION
     Cross-platform community-driven port of the Windows application Keepass Password Safe
 WEBSITE
-    https://keepassxc.org/
+    https://github.com/keepassxreboot/keepassxc
 DEPENDENCIES
         @BaseLibraries-Main:Zlib>=1.2.13(Minizip)
         @QtLibraries-Main:Qtsvg>=5.0.0 ~ <6.0.0
